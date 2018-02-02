@@ -15,7 +15,8 @@ int main()
 	//Change to Enemey Location
 	int secretNumber = rand() % 64 + 1;
 	//Add High and Low Vars
-	int tries = 0;
+	int SusenTries = 0;
+	//add veps
 	int guess;
 	int highRange = 64;
 	int lowRange = 1;
@@ -37,7 +38,7 @@ int main()
 		//the code for thAI to guess
 		guess = (highRange - lowRange) / 2 + lowRange;
 		cout << "Susen has a Guess of: " << guess << endl;
-		++tries;
+		++SusenTries;
 
 		if (guess > secretNumber)
 		{
@@ -62,7 +63,7 @@ int main()
 		else
 		{
 			// If it gets the number.
-			cout << "\nSusen: I had found enemy in " << tries << " lapes! Now termainat enemy.\n";
+			cout << "\nSusen: I had found enemy in " << SusenTries << " lapes! Now termainat enemy.\n";
 			cout << "Susen: Targeting enemy, locking on." << endl;
 			cout << "You: Fire!" << endl;
 		}
