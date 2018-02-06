@@ -43,7 +43,7 @@ int main()
 		cout << "Susen has a Guess of: " << Sguess << endl;
 		++SusenTries;
 		//Lary setup
-		cout << "Lary starting to seach area" << endl;
+		cout << "\n\Lary starting to seach area" << endl;
 		//code for guessing
 		Lguess = Lguess + 1;
 		cout << "Lary has a guess of: " << Lguess << endl;
@@ -53,15 +53,15 @@ int main()
 		//Lary code
 		if (Lguess > secretNumber) {
 			//to high
-			cout << "Lary: Error Too high going lower!\n\n";
-			cout << "Lary augsting High Range" << endl;
+			cout << "Lary: Error Too high going lower!";
+			cout << "\nLary augsting High Range" << endl;
 			OldGuess = Lguess + 1;
 			cout << "New Guess " << OldGuess << endl;
 		}
 		else if (Lguess < secretNumber)
 		{
-			cout << "Lary: Error Too low going higher\n\n";
-			cout << "Lary augsting Low Range" << endl;
+			cout << "Lary: Error Too low going higher";
+			cout << "\nLary augsting Low Range" << endl;
 			//change low keep the high
 			OldGuess = Lguess + 1;
 			cout << "New Low range is " << OldGuess << endl;
