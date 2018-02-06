@@ -17,12 +17,18 @@ int main()
 	//Add High and Low Vars
 	int SusenTries = 0;
 	int laryTries = 0;
-	//add veps
+	int RonTries = 0;
+	//Lary
 	int Lguess = 1;
 	int OldGuess = 1;
+	//Susen
 	int Sguess;
 	int ShighRange = 64;
 	int SlowRange = 1;
+	//Ron
+	int Rguess;
+	int RhighRange;
+	int RlowRange;
 
 	cout << "Susen Is Now Online\n\n" << endl;
 	cout << "\tSusen: Welcome to a new drown hunting program.\n\n";
