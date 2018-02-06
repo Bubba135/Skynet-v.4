@@ -18,6 +18,8 @@ int main()
 	int SusenTries = 0;
 	int laryTries = 0;
 	//add veps
+	int Lguess = 1;
+	int OldGuess = 1;
 	int Sguess;
 	int ShighRange = 64;
 	int SlowRange = 1;
@@ -37,28 +39,61 @@ int main()
 		cout << "***************************" << endl;
 		cout << "Susen: Scanning the area " << endl;
 		//the code for thAI to guess
-		guess = (ShighRange - SlowRange) / 2 + SlowRange;
+		Sguess = (ShighRange - SlowRange) / 2 + SlowRange;
 		cout << "Susen has a Guess of: " << Sguess << endl;
 		++SusenTries;
+		//Lary setup
+		cout << "Lary starting to seach area" << endl;
+		//code for guessing
+		Lguess = Lguess + 1;
+		cout << "Lary has a guess of: " << Lguess << endl;
+		++laryTries;
+		cout << "****************************" << endl;
+		
+		//Lary code
+		if (Lguess > secretNumber) {
+			//to high
+			cout << "Lary: Error Too high going lower!\n\n";
+			cout << "Lary augsting High Range" << endl;
+			OldGuess = Lguess + 1;
+			cout << "New Guess " << OldGuess << endl;
+		}
+		else if (Lguess < secretNumber)
+		{
+			cout << "Lary: Error Too low going higher\n\n";
+			cout << "Lary augsting Low Range" << endl;
+			//change low keep the high
+			OldGuess = Lguess + 1;
+			cout << "New Low range is " << OldGuess << endl;
+		}
+		else
+		{
+			cout << "\nLary: I had found enemy in " << laryTries << " lapes! Now termainat enemy.\n";
+			cout << "Lary: Targeting enemy, locking on." << endl;
+			cout << "You: Fire!" << endl;
+		}
 
+
+		// Susen code
 		if (Sguess > secretNumber)
 		{
 			//The code for being to High
-			cout << "Susen: Error Too high going lower!\n\n";
+			cout << "\n\nSusen: Error Too high going lower!\n\n";
 			cout << "Susen augsting High Range" << endl;
 			cout << "Old High range is " << ShighRange << endl;
 			//change the high keep the low
 			ShighRange = Sguess - 1;
 			cout << "New High range is " << ShighRange << endl;
+
 		}
 		else if (Sguess < secretNumber)
 		{
 			// The code for being to low.
-			cout << "Susen: Error Too low going higher\n\n";
+			cout << "\n\nSusen: Error Too low going higher\n\n";
 			cout << "Susen augsting Low Range" << endl;
 			cout << "Old Low range is " << SlowRange << endl;
 			//change low keep the high
-			lowRange = Sguess + 1;
+			SlowRange = Sguess + 1;
 			cout << "New Low range is " << SlowRange << endl;
 		}
 		else
@@ -68,7 +103,7 @@ int main()
 			cout << "Susen: Targeting enemy, locking on." << endl;
 			cout << "You: Fire!" << endl;
 		}
-	} while (Sguess != secretNumber);
+	} while (Sguess != secretNumber); (Lguess != secretNumber);
 
 	system("pause");
 
