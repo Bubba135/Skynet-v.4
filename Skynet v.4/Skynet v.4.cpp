@@ -16,10 +16,11 @@ int main()
 	int secretNumber = rand() % 64 + 1;
 	//Add High and Low Vars
 	int SusenTries = 0;
+	int laryTries = 0;
 	//add veps
-	int guess;
-	int highRange = 64;
-	int lowRange = 1;
+	int Sguess;
+	int ShighRange = 64;
+	int SlowRange = 1;
 
 	cout << "Susen Is Now Online\n\n" << endl;
 	cout << "\tSusen: Welcome to a new drown hunting program.\n\n";
@@ -36,29 +37,29 @@ int main()
 		cout << "***************************" << endl;
 		cout << "Susen: Scanning the area " << endl;
 		//the code for thAI to guess
-		guess = (highRange - lowRange) / 2 + lowRange;
-		cout << "Susen has a Guess of: " << guess << endl;
+		guess = (ShighRange - SlowRange) / 2 + SlowRange;
+		cout << "Susen has a Guess of: " << Sguess << endl;
 		++SusenTries;
 
-		if (guess > secretNumber)
+		if (Sguess > secretNumber)
 		{
 			//The code for being to High
 			cout << "Susen: Error Too high going lower!\n\n";
 			cout << "Susen augsting High Range" << endl;
-			cout << "Old High range is " << highRange << endl;
+			cout << "Old High range is " << ShighRange << endl;
 			//change the high keep the low
-			highRange = guess - 1;
-			cout << "New High range is " << highRange << endl;
+			ShighRange = Sguess - 1;
+			cout << "New High range is " << ShighRange << endl;
 		}
-		else if (guess < secretNumber)
+		else if (Sguess < secretNumber)
 		{
 			// The code for being to low.
 			cout << "Susen: Error Too low going higher\n\n";
 			cout << "Susen augsting Low Range" << endl;
-			cout << "Old Low range is " << lowRange << endl;
+			cout << "Old Low range is " << SlowRange << endl;
 			//change low keep the high
-			lowRange = guess + 1;
-			cout << "New Low range is " << lowRange << endl;
+			lowRange = Sguess + 1;
+			cout << "New Low range is " << SlowRange << endl;
 		}
 		else
 		{
@@ -67,7 +68,7 @@ int main()
 			cout << "Susen: Targeting enemy, locking on." << endl;
 			cout << "You: Fire!" << endl;
 		}
-	} while (guess != secretNumber);
+	} while (Sguess != secretNumber);
 
 	system("pause");
 
