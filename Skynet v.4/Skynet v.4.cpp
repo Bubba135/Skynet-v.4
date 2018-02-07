@@ -30,8 +30,12 @@ int main()
 	int RhighRange;
 	int RlowRange;
 
-	cout << "Susen Is Now Online\n\n" << endl;
-	cout << "\tSusen: Welcome to a new drown hunting program.\n\n";
+	//human
+	int HumanTries = 0;
+	int Hguess;
+
+	cout << "Is Now Online\n\n" << endl;
+	cout << "\tWelcome to a new drown hunting program.\n\n";
 
 	cout << "You: In this program you will see how a AI will hunt" << endl;
 	cout << "down enemy in a 8x8 grid with out humen error.\n\n" << endl;
@@ -43,6 +47,12 @@ int main()
 		//How the program will find it numbers
 		cout << endl << endl;
 		cout << "***************************" << endl;
+
+		//Human
+		cout << "Wat is your Guess: " << endl;
+		cin >> "Your Guess: ";
+
+		//Susen
 		cout << "Susen: Scanning the area " << endl;
 		//the code for thAI to guess
 		Sguess = (ShighRange - SlowRange) / 2 + SlowRange;
@@ -64,13 +74,6 @@ int main()
 		++RonTries;
 		cout << "****************************" << endl;
 		
-		//Ron Code
-		if (Rguess > secretNumber) {
-			cout << "Ron: Error Too high going lower!";
-
-		}
-
-
 		//Lary code
 		if (Lguess > secretNumber) {
 			//to high
