@@ -57,9 +57,20 @@ int main()
 		++laryTries;
 
 		//Ron setup
+		cout << "\n\Ron starting to seach area" << endl;
+		//code for guessing
 		Rguess = rand() % 64 + 1;
+		cout << "Ron has a guess of: " << Rguess << endl;
+		++RonTries;
 		cout << "****************************" << endl;
 		
+		//Ron Code
+		if (Rguess > secretNumber) {
+			cout << "Ron: Error Too high going lower!";
+
+		}
+
+
 		//Lary code
 		if (Lguess > secretNumber) {
 			//to high
