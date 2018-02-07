@@ -48,12 +48,16 @@ int main()
 		Sguess = (ShighRange - SlowRange) / 2 + SlowRange;
 		cout << "Susen has a Guess of: " << Sguess << endl;
 		++SusenTries;
+		
 		//Lary setup
 		cout << "\n\Lary starting to seach area" << endl;
 		//code for guessing
 		Lguess = Lguess + 1;
 		cout << "Lary has a guess of: " << Lguess << endl;
 		++laryTries;
+
+		//Ron setup
+		Rguess = rand() % 64 + 1;
 		cout << "****************************" << endl;
 		
 		//Lary code
