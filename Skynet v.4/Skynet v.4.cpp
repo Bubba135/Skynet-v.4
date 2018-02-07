@@ -50,7 +50,7 @@ int main()
 
 		//Human
 		cout << "Wat is your Guess: " << endl;
-		cin >> "Your Guess: ";
+		cin >> Hguess;
 
 		//Susen
 		cout << "Susen: Scanning the area " << endl;
@@ -127,7 +127,7 @@ int main()
 			cout << "Susen: Targeting enemy, locking on." << endl;
 			cout << "You: Fire!" << endl;
 		}
-	} while (Sguess != secretNumber); (Lguess != secretNumber);
+	} while (Sguess != secretNumber);
 
 	system("pause");
 
